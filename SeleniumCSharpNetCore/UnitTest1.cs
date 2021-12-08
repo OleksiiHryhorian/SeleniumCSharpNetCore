@@ -26,12 +26,7 @@ namespace SeleniumCSharpNetCore
 
             CustomControl customControl = new(Driver);
             customControl.ComboBox("ContentPlaceHolder1_AllMealsCombo", "Almond");
-
-            
-
-            Console.WriteLine("Test1");
             Assert.Pass();
-
         }
     }
 }

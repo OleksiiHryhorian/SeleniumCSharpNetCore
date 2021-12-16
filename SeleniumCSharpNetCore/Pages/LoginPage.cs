@@ -7,16 +7,18 @@ using System.Threading.Tasks;
 
 namespace SeleniumCSharpNetCore.Pages
 {
-    public class LoginPage : DriverHelper
+    public class LoginPage
     {
-        public LoginPage(IWebDriver driver) : base()
+        IWebDriver _driver;
+
+        public LoginPage(IWebDriver driver)
         {
-            this.driver = driver;
+            _driver = driver;
         }
 
-        IWebElement txtUserName => driver.FindElement(By.Id("UserName"));
-        IWebElement txtPassword => driver.FindElement(By.Id("Password"));
-        IWebElement btnLogin => driver.FindElement(By.XPath("//input[@class = 'btn btn-default']"));
+        IWebElement txtUserName => _driver.FindElement(By.Id("UserName"));
+        IWebElement txtPassword => _driver.FindElement(By.Id("Password"));
+        IWebElement btnLogin => _driver.FindElement(By.XPath("//input[@class = 'btn btn-default']"));
 
         public void EnterUserNameAndPassword(string userName, string password)
         {

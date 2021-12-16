@@ -7,15 +7,17 @@ using System.Threading.Tasks;
 
 namespace SeleniumCSharpNetCore.Pages
 {
-    public class HomePage : DriverHelper
+    public class HomePage
     {
-        public HomePage(IWebDriver driver) : base()
+        IWebDriver _driver;
+
+        public HomePage(IWebDriver driver)
         {
-            this.driver = driver;
+            this._driver = driver;
         }
 
-        IWebElement lnkLogin => driver.FindElement(By.LinkText("Login"));
-        IWebElement lnkLogOff => driver.FindElement(By.LinkText("Log off"));
+        IWebElement lnkLogin => _driver.FindElement(By.LinkText("Login"));
+        IWebElement lnkLogOff => _driver.FindElement(By.LinkText("Log off"));
 
         public void ClickLogin() => lnkLogin.Click();
 

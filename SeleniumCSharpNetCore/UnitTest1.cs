@@ -5,6 +5,7 @@ using OpenQA.Selenium.Chrome;
 using System;
 using WebDriverManager.DriverConfigs.Impl;
 using SeleniumCSharpNetCore.Pages;
+using SeleniumCSharpNetCore.Steps;
 
 namespace SeleniumCSharpNetCore
 {
